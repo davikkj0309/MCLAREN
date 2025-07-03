@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -7,71 +6,87 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-size: cover;
-  background-position: center;
-  color: #f1f1f1;
-  min-height: 100vh;
-  padding-top: 80px;
-}
-
-
-header {
-  background-color: rgba(0, 0, 0, 0.85);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  border-bottom: 2px solid #ff5f00;
-}
-
-nav ul {
+  background-color: #111;
+  color: #eee;
   display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 20px 0;
+  min-height: 100vh;
 }
 
-nav ul li {
-  margin: 0 25px;
+
+nav {
+  width: 250px;
+  background-color: #000;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right: 2px solid #ff5f00;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #f1f1f1;
-  font-weight: bold;
-  font-size: 16px;
-  padding-bottom: 5px;
-  transition: 0.3s;
-  border-bottom: 2px solid transparent;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
+nav h2 {
   color: #ff5f00;
-  border-bottom: 2px solid #ff5f00;
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
 }
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 16px;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #ff5f00;
+  color: #000;
+}
+
 
 main {
-  display: grid;
-  grid-template-columns: 1fr min(900px, 90%) 1fr;
-  padding: 40px 0;
+  flex: 1;
+  padding: 40px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-main section {
-  grid-column: 2;
-  background-color: rgba(0, 0, 0, 0.75);
+
+.imagem {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.imagem img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  border: 2px solid #ff5f00;
+  box-shadow: 0 0 20px rgba(255, 95, 0, 0.4);
+}
+
+
+.conteudo {
+  flex: 2;
+  background-color: #000;
   padding: 30px;
   border-radius: 10px;
+  border-left: 4px solid #ff5f00;
 }
 
-h1 {
-  font-size: 34px;
+.conteudo h1 {
+  font-size: 30px;
   color: #ff5f00;
   margin-bottom: 20px;
 }
 
-p {
-  font-size: 18px;
+.conteudo p {
+  font-size: 17px;
+  line-height: 1.6;
   margin-bottom: 16px;
-  line-height: 1.7;
 }
